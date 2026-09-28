@@ -134,23 +134,22 @@ Before finishing, review the page as a senior designer would:
 - Is the body background white everywhere except the tinted alternate sections?
 Fix anything that fails these checks.
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/535747f9-161e-4e20-803e-c034eb1f8f41).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This project uses [Bun](https://bun.sh) for package management and running scripts.
 
 ```sh
 git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+cd akashganga-homepage
+bun install
+bun run dev
+```
+
+Other useful scripts:
+
+```sh
+bun run build     # production build
+bun run preview   # preview the production build locally
+bun run lint      # eslint
+bun run format    # prettier --write
 ```
