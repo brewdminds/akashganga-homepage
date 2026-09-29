@@ -1,3 +1,6 @@
+/** Prefix a file in /public with the deploy base path (e.g. "/akashganga-homepage/" on GitHub Pages). */
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export type ImageAsset = {
   src?: string;
   alt: string;
@@ -13,21 +16,21 @@ export type ImageAsset = {
 export const heroVideo: string | undefined = undefined;
 
 export const images = {
-  hero: "/images/hero-sand-plant.jpg",
-  aboutFactory: "/images/about-factory.jpg",
-  aboutLab: "/images/about-lab.jpg",
-  techRotor: "/images/tech-rotor.jpg",
-  newsFinesSeparator: "/images/news-fines-separator.jpg",
-  machineSand: "/images/machine-sand.jpg",
-  machineVsi: "/images/machine-vsi.jpg",
-  machineHighSilica: "/images/machine-high-silica.jpg",
-  machinePlasterSand: "/images/machine-plaster-sand.jpg",
-  machineDustSeparator: "/images/machine-dust-separator.jpg",
-  machineJawCone: "/images/machine-jaw-cone.jpg",
-  appConstructionStone: "/images/app-construction-stone.jpg",
-  appAbrasiveStone: "/images/app-abrasive-stone.jpg",
-  appIndustrialMinerals: "/images/app-industrial-minerals.jpg",
-  appRecycling: "/images/app-recycling.jpg",
+  hero: asset("/images/hero-sand-plant.jpg"),
+  aboutFactory: asset("/images/about-factory.jpg"),
+  aboutLab: asset("/images/about-lab.jpg"),
+  techRotor: asset("/images/tech-rotor.jpg"),
+  newsFinesSeparator: asset("/images/news-fines-separator.jpg"),
+  machineSand: asset("/images/machine-sand.jpg"),
+  machineVsi: asset("/images/machine-vsi.jpg"),
+  machineHighSilica: asset("/images/machine-high-silica.jpg"),
+  machinePlasterSand: asset("/images/machine-plaster-sand.jpg"),
+  machineDustSeparator: asset("/images/machine-dust-separator.jpg"),
+  machineJawCone: asset("/images/machine-jaw-cone.jpg"),
+  appConstructionStone: asset("/images/app-construction-stone.jpg"),
+  appAbrasiveStone: asset("/images/app-abrasive-stone.jpg"),
+  appIndustrialMinerals: asset("/images/app-industrial-minerals.jpg"),
+  appRecycling: asset("/images/app-recycling.jpg"),
 } as const;
 
 export type Spec = { label: string; value: string };
